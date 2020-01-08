@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 
 @WebServlet(name="SandboxPong", urlPatterns="/pong")
 public class SandboxPong extends HttpServlet {
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
@@ -15,7 +14,4 @@ public class SandboxPong extends HttpServlet {
                 "<button type='submit'>Pong!</button>" +
                 "</form>");
     }
-
-
-
 }
