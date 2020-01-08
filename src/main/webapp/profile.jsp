@@ -11,7 +11,23 @@
 <html>
 <head>
     <title>Profile</title>
-    <link rel="stylesheet" href="profile.css" type="text/css">
+    <link rel="stylesheet" href="/profile.css" type="text/css">
+<%--    <style>--%>
+<%--        body {--%>
+<%--            background-color: blue;--%>
+<%--        }--%>
+<%--        nav {--%>
+<%--            background-color: darkslateblue;--%>
+<%--            color: white;--%>
+<%--        }--%>
+<%--        ul {--%>
+<%--            display: flex;--%>
+<%--            justify-content: space-around;--%>
+<%--            align-items: center;--%>
+<%--            list-style: none;--%>
+<%--        }--%>
+
+<%--    </style>--%>
 </head>
 <body>
 
