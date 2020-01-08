@@ -11,8 +11,11 @@
 <html>
 <head>
     <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" type="text/css">
 </head>
 <body>
+
+    <%@ include file="partials/navbar.jsp" %>
     <c:out value="redirect success!">
 
     </c:out>

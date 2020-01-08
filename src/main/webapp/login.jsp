@@ -22,8 +22,7 @@
             <button type="submit">Login!</button>
         </form>
     <h1>Testing!!!!! </h1>
-
-    <%--    <c:param name="username" value="${param.username}"></c:param>--%>
+<%--        <c:param name="username" value="${param.username}"></c:param>--%>
     <%--    <c:param name="password" value="${param.password}"></c:param>--%>
 
         <c:choose>
