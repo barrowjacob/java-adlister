@@ -10,35 +10,31 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <form action="./login.jsp" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Login!</button>
-    </form>
-<h1>Testing!!!!! </h1>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <form action="./login.jsp" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login!</button>
+        </form>
+    <h1>Testing!!!!! </h1>
 
-<%--    <c:param name="username" value="${param.username}"></c:param>--%>
-<%--    <c:param name="password" value="${param.password}"></c:param>--%>
+    <%--    <c:param name="username" value="${param.username}"></c:param>--%>
+    <%--    <c:param name="password" value="${param.password}"></c:param>--%>
 
-<%--    <c:choose>--%>
-        <c:if test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
-            <c:redirect url="profile.jsp">
+        <c:choose>
+            <c:when test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
+                <c:redirect url="profile.jsp">
+                </c:redirect>
+            </c:when>
+            <c:otherwise>
+                <c:out value="redirect failed for username: ${param.username}" />
+            </c:otherwise>
+        </c:choose>
 
-            </c:redirect>
-        </c:if>
-
-
-<%--        </c:when>--%>
-<%--        <c:otherwise>--%>
-<%--            <c:out value="username: ${param.username} password: ${param.password}" />--%>
-<%--        </c:otherwise>--%>
-<%--    </c:choose>--%>
-
-</body>
+    </body>
 </html>
