@@ -8,7 +8,8 @@
     </head>
     <body>
         <%@ include file="partials/navbar.jsp"%>
-<%--        <%! boolean isLoggedIn = "true">--%>
+<%--         FIGURE OUT WHY USE SEMICOLON--%>
+        <%! boolean isLoggedIn = true;%>
         <div>
             <c:choose>
                 <c:when test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
