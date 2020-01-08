@@ -12,7 +12,7 @@ public class SandboxPing extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<form action='/pong'>" +
-                "<button type='submit' action='/pong'>Ping!</button>" +
+                "<button type='submit'>Ping!</button>" +
                 "</form>");
 
     }
