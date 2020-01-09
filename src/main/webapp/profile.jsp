@@ -10,5 +10,7 @@
     <%@ include file="partials/navbar.jsp" %>
     <c:out value="redirect success!">
     </c:out>
+    <%@ include file="partials/scripts.jsp"%>
+
 </body>
 </html>

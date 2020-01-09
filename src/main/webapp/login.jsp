@@ -15,20 +15,25 @@
                 <c:when test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
                     <c:redirect url="profile.jsp"/>
                 </c:when>
-                <c:otherwise>
-                    <h1><c:out value="Please enter username and password"/></h1>
-                </c:otherwise>
+<%--                <c:otherwise>--%>
+<%--                    <h1><c:out value="Please login."/></h1>--%>
+<%--                </c:otherwise>--%>
             </c:choose>
-            <form class="form" action="./login.jsp" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button type="submit">Login!</button>
+            <form id="loginForm" class="form" action="./login.jsp" method="POST">
+                <h1 class="display-4">Please login.</h1>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn">Login!</button>
             </form>
         </div>
+        <%@ include file="partials/scripts.jsp"%>
+
     </body>
 </html>
 
