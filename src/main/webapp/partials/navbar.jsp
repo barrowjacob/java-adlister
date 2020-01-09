@@ -2,6 +2,7 @@
 
 <nav>
     <ul>
+
         <c:choose>
             <c:when test="${isLoggedIn}">
                 <li>Adlister</li>
@@ -19,3 +20,7 @@
         </c:choose>
     </ul>
 </nav>
+
+<%--<c:if test="${isLoggedIn}">--%>
+<%--    <h1>WHOA!</h1>--%>
+<%--</c:if>--%>

@@ -9,7 +9,6 @@
     <body>
         <%@ include file="partials/navbar.jsp"%>
 <%--         FIGURE OUT WHY USE SEMICOLON--%>
-        <%! boolean isLoggedIn = true;%>
         <div>
             <c:choose>
                 <c:when test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
@@ -19,7 +18,7 @@
 <%--                    <h1><c:out value="Please login."/></h1>--%>
 <%--                </c:otherwise>--%>
             </c:choose>
-            <form id="loginForm" class="form" action="./login.jsp" method="POST">
+            <form id="loginForm" class="form" action="./login" method="POST">
                 <h1 class="display-4">Please login.</h1>
                 <div class="form-group">
                     <label for="username">Username:</label>
