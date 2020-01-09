@@ -2,14 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><%= "some title" %></title>
+    <title>Show All Products</title>
 </head>
 <body>
-    <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
-    </c:if>
-    <c:if test="false">
-        <h1>single letter variable names are good</h1>
-    </c:if>
+    <c:forEach var="product" items="${productList}">
+        <h1>Name: ${product.name}</h1>
+        <h3>Price: ${product.price}</h3>
 </body>
 </html>
