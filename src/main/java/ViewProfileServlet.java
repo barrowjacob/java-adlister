@@ -8,6 +8,15 @@ import java.io.IOException;
 @WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String isLoggedIn = request.getParameter("isLoggedIn");
+        request.setAttribute("isLoggedIn",isLoggedIn);
+        if (isLoggedIn.equalsIgnoreCase("true")) {
+
+        }
+
+
+
+
         request.getRequestDispatcher("/profile.jsp").forward(request, response);
     }
 }
