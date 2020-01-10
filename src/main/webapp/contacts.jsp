@@ -27,6 +27,7 @@
         <div>
             <h2>Name: ${contact.firstName} ${contact.lastName}</h2>
             <h3>Phone Number:${contact.phoneNumber}</h3>
+            <h3>ID: ${contact.id}</h3>
             <a href="/contacts/update">Update</a>
         </div>
     </c:forEach>

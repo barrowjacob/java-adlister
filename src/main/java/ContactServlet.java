@@ -12,7 +12,7 @@ public class ContactServlet extends HttpServlet {
         static private List<Contact> contacts = ContactListDao.getContacts();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("contacts", contacts);
-        request.getRequestDispatcher("./contacts.jsp").forward(request, response);
+        request.getRequestDispatcher("/contacts.jsp").forward(request,response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

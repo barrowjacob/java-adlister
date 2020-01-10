@@ -7,7 +7,7 @@
 <body>
 <%--trying to create update contact form utilizing contact's id,
 just haven't figured out how to do that yet--%>
-    <h1>Update ${contact.firstName}'s Info:</h1>
+    <h1>Update ${contacts.firstName}'s Info:</h1>
     <form method="POST" action="/contacts">
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" name="firstName">
