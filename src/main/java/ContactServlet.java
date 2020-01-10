@@ -8,16 +8,21 @@ import java.util.List;
 
 @WebServlet("/contacts")
 public class ContactServlet extends HttpServlet {
+        static private Contacts ContactListDao = DaoFactory.getContactsDao();
+        static private List<Contact> contacts = ContactListDao.getContacts();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        Contacts ContactListDao = DaoFactory.getContactsDao();
-        List<Contact> contacts = ContactListDao.getContacts();
         request.setAttribute("contacts", contacts);
         request.getRequestDispatcher("./contacts.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getAttribute("")
-
+        String firstName= request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String phoneNumber = request.getParameter("phoneNumber");
+        Contact contactly = new Contact(firstName, lastName, phoneNumber);
+        ContactListDao.saveContact(contactly);
+        request.setAttribute("contacts", contacts);
+        request.getRequestDispatcher("/contacts.jsp").forward(request,response);
     }
 }
 

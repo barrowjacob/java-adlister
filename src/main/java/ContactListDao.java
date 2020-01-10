@@ -22,6 +22,7 @@ import java.util.List;
             contacts.add(new Contact(4, "Kyle", "Reese", "2105551111"));
         }
 
+
         @Override
         public List<Contact> getContacts() {
             return contacts;
@@ -34,7 +35,7 @@ import java.util.List;
                 contact.setId(contacts.size() + 1);
                 contacts.add(contact);
             } else {
-                contacts.set((int) contact.getId() -1, contact);
+                contacts.set((int) contact.getId() - 1, contact);
             }
 
             return contact.getId();
@@ -56,84 +57,85 @@ import java.util.List;
         public Contact getContactById(long id) {
             return contacts.get((int) id - 1);
         }
-
-        // only for testing DAO; run Tomcat server to run application
-        public static void main(String[] args) {
-            Contacts contactDao = new ContactListDao();
-
-
-            // test getContacts()
-
-            System.out.println("\n=== Testing getContacts()");
-            List<Contact> allContacts = contactDao.getContacts();
-
-            for (Contact contact : allContacts) {
-                System.out.println(contact.getFirstName());
-            }
-
-            // test getContactById()
-            System.out.println("\n=== Testing getContactById()");
-
-            System.out.print(contactDao.getContactById(1).getFirstName()); // should be "John"
-            System.out.print(" // should be John");
-
-
-            // test save contact on new contact
-
-            System.out.println("\n\n=== Testing saveContact() to create contact");
-
-            long id = contactDao.saveContact(new Contact("TeeOne", "Thousand", "2105555555"));
-            System.out.println(id);
-
-            allContacts = contactDao.getContacts();
-
-            for (Contact contact : allContacts) {
-                System.out.println(contact.getFirstName());
-            }
-
-            // test updating a contact
-
-            System.out.println("\n=== Testing saveContact() to update contact");
-
-            System.out.println("// contacts before update");
-
-            allContacts = contactDao.getContacts();
-
-            for (Contact contact : allContacts) {
-                System.out.println(contact.getFirstName());
-            }
-
-            System.out.println("// change Fred Smith to Bob Smith");
-
-            Contact contactToUpdate = contactDao.getContactById(2);
-            contactToUpdate.setFirstName("Bob");
-            contactDao.saveContact(contactToUpdate);
-
-            System.out.println(contactDao.getContactById(2).getFirstName() + " // should be Bob");
-
-            // test deleteContact()
-
-            System.out.println("\n=== Testing deleteContact()");
-
-            System.out.println("// before delete...");
-
-            allContacts = contactDao.getContacts();
-
-            for (Contact contact : allContacts) {
-                System.out.println(contact.getFirstName());
-            }
-
-            System.out.println("// deleting Fred Smith...");
-            contactDao.deleteContactById(2);
-            System.out.println("// after delete...");
-            allContacts = contactDao.getContacts();
-
-            for (Contact contact : allContacts) {
-                System.out.println(contact.getFirstName());
-            }
-
-
-        }
     }
 
-
+        // only for testing DAO; run Tomcat server to run application
+//        public static void main(String[] args) {
+//            Contacts contactDao = new ContactListDao();
+//
+//
+//            // test getContacts()
+//
+//            System.out.println("\n=== Testing getContacts()");
+//            List<Contact> allContacts = contactDao.getContacts();
+//
+//            for (Contact contact : allContacts) {
+//                System.out.println(contact.getFirstName());
+//            }
+//
+//            // test getContactById()
+//            System.out.println("\n=== Testing getContactById()");
+//
+//            System.out.print(contactDao.getContactById(1).getFirstName()); // should be "John"
+//            System.out.print(" // should be John");
+//
+//
+//            // test save contact on new contact
+//
+//            System.out.println("\n\n=== Testing saveContact() to create contact");
+//
+//            long id = contactDao.saveContact(new Contact("TeeOne", "Thousand", "2105555555"));
+//            System.out.println(id);
+//
+//            allContacts = contactDao.getContacts();
+//
+//            for (Contact contact : allContacts) {
+//                System.out.println(contact.getFirstName());
+//            }
+//
+//            // test updating a contact
+//
+//            System.out.println("\n=== Testing saveContact() to update contact");
+//
+//            System.out.println("// contacts before update");
+//
+//            allContacts = contactDao.getContacts();
+//
+//            for (Contact contact : allContacts) {
+//                System.out.println(contact.getFirstName());
+//            }
+//
+//            System.out.println("// change Fred Smith to Bob Smith");
+//
+//            Contact contactToUpdate = contactDao.getContactById(2);
+//            contactToUpdate.setFirstName("Bob");
+//            contactDao.saveContact(contactToUpdate);
+//
+//            System.out.println(contactDao.getContactById(2).getFirstName() + " // should be Bob");
+//
+//            // test deleteContact()
+//
+//            System.out.println("\n=== Testing deleteContact()");
+//
+//            System.out.println("// before delete...");
+//
+//            allContacts = contactDao.getContacts();
+//
+//            for (Contact contact : allContacts) {
+//                System.out.println(contact.getFirstName());
+//            }
+//
+//            System.out.println("// deleting Fred Smith...");
+//            contactDao.deleteContactById(2);
+//            System.out.println("// after delete...");
+//            allContacts = contactDao.getContacts();
+//
+//            for (Contact contact : allContacts) {
+//                System.out.println(contact.getFirstName());
+//            }
+//
+//
+//        }
+//    }
+//
+//

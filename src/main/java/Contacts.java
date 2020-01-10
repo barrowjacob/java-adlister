@@ -5,4 +5,5 @@ public interface Contacts {
      long saveContact(Contact contact);
      void deleteContactById(long id);
      Contact getContactById(long id);
+
 }
