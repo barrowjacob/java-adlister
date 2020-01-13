@@ -7,7 +7,7 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="../partials/navbar.jsp" />
+    <jsp:include page="../partials/loggedInNavbar.jsp" />
     <div class="container">
         <h1>Welcome to the Adlister!</h1>
     </div>
