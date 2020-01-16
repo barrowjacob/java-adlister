@@ -26,7 +26,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
@@ -74,5 +73,9 @@ public class MySQLAdsDao implements Ads {
             ads.add(extractAd(rs));
         }
         return ads;
+    }
+
+    public static void main(String[] args) {
+        DaoFactory.getAdsDao().all();
     }
 }
